@@ -1,0 +1,44 @@
+{
+  "name": "grunt-vnu",
+  "description": "Html validation grunt plugin using w3c nu validator with angular template support",
+  "version": "0.0.1",
+  "homepage": "https://github.com/odor/grunt-validator-nu-angular",
+  "author": "odor <aodorovic@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odor/grunt-validator-nu-angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/odor/grunt-validator-nu-angular.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/odor/grunt-validator-nu-angular/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "dependencies": {
+    "temp": "latest",
+    "underscore": "latest",
+    "mkdirp": "latest"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin", "w3c"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ]
+}
