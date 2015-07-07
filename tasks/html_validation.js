@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         var text = message.message;
 
         var customtag = _.find(options.customtags, function(tag) {
-            var re = new RegExp('Attribute (.?)' + tag + '(.?) not allowed on element (.*) at this point.');
+            var re = new RegExp('Element (.?)' + tag + '(.?) not allowed as child of element (.*)');
 
             if (re.test(text)) {
                 return true;
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
         var text = message.message;
 
         var customattr = _.find(options.customattrs, function(attr) {
-            var re = new RegExp('Attribute (.?)' + attr + '(.?) not allowed on element (.*) at this point.');
+            var re = new RegExp('Attribute (.?)' + attr + '(.?) not allowed on element (.*) at this point.(.*)');
 
             if (re.test(text)) {
                 return true;
@@ -93,9 +93,11 @@ module.exports = function (grunt) {
         }
     })
 
+    var prefixdir = temp.dir.replace(new RegExp('\\\\', 'g'), '/');
+
     if (errorReport.messages.length > 0) {
       _.each(errorReport.messages, function(message) {
-        var file = message.url.replace(new RegExp('file:' + temp.dir + '/', 'g'), '');
+        var file = message.url.replace(new RegExp('file:(.*)' + prefixdir + '/', 'g'), '');
         var msg = file + ':' + message.lastLine + ':' + message.firstColumn + ': ' + message.message;
         grunt.log.writeln(msg);
       });
