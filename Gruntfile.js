@@ -15,7 +15,9 @@ module.exports = function(grunt) {
           src: ['test/html/template.html']
         },
         options: {
-            templateSandwich: true
+            templateSandwich: true,
+            customtags: ['ng-*'],
+            customattrs: ['ng-*', 'layout']
         }
       }
     }

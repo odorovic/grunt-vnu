@@ -1,7 +1,7 @@
 {
   "name": "grunt-vnu",
   "description": "Html validation grunt plugin using w3c nu validator with angular template support",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/odor/grunt-validator-nu-angular",
   "author": "odor <aodorovic@gmail.com>",
   "repository": {
