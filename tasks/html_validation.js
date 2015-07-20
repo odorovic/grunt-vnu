@@ -13,6 +13,10 @@ module.exports = function (grunt) {
 
   grunt.registerMultiTask('validate_html', 'W3C nu html validation', function() {
 
+    if (spawn === undefined) {
+      grunt.warn('Cannot find child_process.spawnSync - Update node.js');
+    }
+
     var options = this.options({
       customtags: [],
       customattrs: [],
